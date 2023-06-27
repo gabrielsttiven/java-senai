@@ -44,7 +44,7 @@ public class Diretor extends Funcionario implements Contratacao{
     @Override
     public String toString(){
         return super.toString() + 
-            "Diretor: " + "\n Prêmio: " + PREMIO +
+            "Diretor: " + "\n Prêmio: " + (PREMIO * 100) + "%" +
             "\n Salário Final: " + Util.formatarMonetacao(getSalarioFinal());
     }
     
