@@ -37,7 +37,7 @@ public class Motoboy extends Funcionario{
     public String toString() {
         return super.toString() +
                 "Carteira De Habilitação: " + carteiraDeHabilitacao;
-        "\n Salário Final: " + Util.formatarMonetencao(getSalarioFinal());
+        "\n Salário Final: " + Util.formatarMonetacao(getSalarioFinal());
     }
     
     
