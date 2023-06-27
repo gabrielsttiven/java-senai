@@ -19,9 +19,16 @@ public class Diretor extends Funcionario implements Contratacao{
         super(nome, dataNascimento, genero, setor, salarioBase);
     }
 
+    public double getPREMIO(){
+        return PREMIO;
+    }
+
     @Override
     public double getSalarioFinal() {
-        return salarioBase + (salarioBase*PREMIO);
+        double salarioFinal = 0;
+        salarioFinal += super.salarioBase * this.PREMIO;
+        salarioFinal += super.salarioBase;
+        return salarioFinal;
     }
 
     @Override
@@ -32,6 +39,12 @@ public class Diretor extends Funcionario implements Contratacao{
     @Override
     public void demitir(Funcionario funcionario) {
         System.out.println("Você está demitido!");
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() + 
+            "Diretor: " + "\n Prêmio: " + PREMIO;
     }
     
     
